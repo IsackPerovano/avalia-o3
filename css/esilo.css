@@ -1,0 +1,133 @@
+@charset "UTF-8";
+/*
+Colocar uma fonte nova foi utilizado o font-face;
+*/
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins-Medium.ttf);
+}
+/*
+Deixar o site mais reponsivo, com o article, deixei os elementos com a margin em cima de 70px;
+Altera a direção do flexbox do header para coluna e ainda centralizo;
+Espaçamento entre a logo e o nav ul e centralizo;
+*/
+@media (max-width: 600px) {
+    
+    article{
+        margin-top: 50px;
+    }
+
+    header {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*
+Zerar o tamanho do margin e do padding; mudada  tamaho da fonte; 
+foi escolhida a fonte "Poppins"; 
+"list-style: none" para retirar as bolinhas laterias da lista;
+*/
+body, nav ul, a, h3{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: Poppins;
+    list-style: none;
+}
+/*
+O elementeo "a" é referente aos links, foi retirado a linha que fica embaixo; 
+foi mudada a cor; 
+mudança do tamanho da fonte da cabeçalho;
+*/
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+/*
+Foi ativado o flexbox do elemento; 
+"justify-content: space-between" os elementos deixaram um espaçamento igaual (levar em
+consideração que existe logo e nav, sendo dois elementos e por isso o espaçamento); 
+a mudança de cor;
+*/
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0);
+}
+/*
+Ativado o flexbox; 
+mudando o espaçamento dos elementos.
+*/
+nav ul{
+    display: flex;
+    padding: 20px;
+   
+}
+/*
+Para dar o espaçamento aos elementos que estão na "class=box"; 
+*/
+.box{
+    margin-left: 10px;
+    padding: 10px;
+    align-items: center;
+}
+/*
+Necessario ativar o flex para usar "align-items: center" para alinhar o item;
+Usado esse valor para dar um espaçamento;
+*/
+.logo{
+    display: flex;
+    align-items: ;
+    align-items: center;
+    margin-left: 10px;
+    padding-top: 10px;
+
+}
+/*
+Para o texto ficar centralizado;
+Mudança no tamanho da fonte;
+Espaçamento usando o padding;
+*/
+h3{
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+}
+/*
+Com o "display: block;" a imagem fica travada, independe do quanto aumente a pagina;
+Logo em seguida, falo para ele ter no máximo 100% de largura;
+*/
+img{
+    display: block;
+    max-width: 100%;
+}
+/*
+Ativando o flex;
+"Flex-wrap:wrap" vai quebrar a linha para que os elementos sejam exibidos;
+*/
+.buggatti{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*
+".buggatti > article" mostra que é um filho direto da class bugatti;
+"flex: 1 1 200px" para definir o tamanho que ficarão as imagens;
+*/
+.buggatti > article{
+    flex: 1 1 200px;
+    padding: 20px;
+
+}
+/*
+A tag <p> é referente a legenda, o texto foi centralizado
+*/
+p{
+    text-align: center;
+}
